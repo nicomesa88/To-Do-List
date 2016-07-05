@@ -4,8 +4,6 @@ import Backbone from 'backbone'
 
 
 function app() {
-    // start app
-    // new Router()
 
     var GoalModel = Backbone.Model.extend({
 
@@ -73,9 +71,9 @@ function app() {
             if (this.state.viewType === "Done") goalColl = goalColl.where({status: "Done"})
             return (
                     <div className="goalView">
-                        {/*<div className="header">
-                        <p className="title">Goal-Builder</p>
-                        </div>*/}
+                        <div className="header">
+                        <h1 className="title">To-Do List</h1>
+                        </div>
 
                         <div className="buttons">{this._genButtons()}</div>
                         <GoalAdder adderFunc={this._addGoal} />
